@@ -41,7 +41,7 @@ namespace Application.Activities
         // {
         //   _logger.LogInformation("Task was cancelled.");;
         // }
-        return await _context.Activities.ToListAsync();
+        return await _context.Activities.OrderBy(a => a.Date).ToListAsync();
       }
     }
   }
